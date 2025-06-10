@@ -334,7 +334,7 @@ public class Plateau
 			}
 		}
 		System.out.println();
-		System.out.print("  A  B C  D E  F G  H");
+		System.out.print(" |A|B|C|D|E|F|G|H|");
 	}
 
 	public void movePiece(Scanner sc, boolean isWhiteToMove)
@@ -433,5 +433,4 @@ public class Plateau
 			}
 		}
 	}
-
 }
