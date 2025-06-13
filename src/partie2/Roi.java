@@ -1,4 +1,4 @@
-package partie1;
+package partie2;
 
 import java.util.ArrayList;
 
@@ -37,7 +37,7 @@ public class Roi implements IPiece
 
 	@Override
 	public boolean canMove(ArrayList<ArrayList<IPiece>> plateau, int colonneDepart, int ligneDepart, int colonneArrivee,
-			int ligneArrivee)
+	                       int ligneArrivee)
 	{
 
 		System.out.println(PlateauUtils.getColumnLetter(colonneArrivee) + (ligneArrivee + 1));

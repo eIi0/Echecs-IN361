@@ -1,4 +1,4 @@
-package partie1;
+package partie2;
 
 import java.util.ArrayList;
 

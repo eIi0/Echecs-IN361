@@ -1,0 +1,13 @@
+{
+  "nom": "LION",
+  "unicode": "U+1F981",
+  "couleur": "white",
+  "position": "C3",
+  "saut": 1,
+  "mouvements": [
+    [-2, -2],
+    [-2, 2],
+    [2, -2],
+    [2, 2]
+  ]
+}

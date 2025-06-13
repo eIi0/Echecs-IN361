@@ -1,0 +1,12 @@
+[
+  {
+    "nom": "TANK",
+    "unicode": "U+1F6E2",
+    "couleur": "black",
+    "position": "E4",
+    "mouvements": {
+      "type": "ligne",
+      "distance": 3
+    }
+  }
+]
