@@ -1,47 +1,18 @@
-[
-   {
-      "nom":"NOM",
-      "unicode":"UNICODE Code",
-      "couleur":"white/blanc ou black/noir",
-      "position":"A1 -> H8",
-      "Saut" : 1 si peut sauter des pièces, 0 sinon. Pour des mouvements différents de ligne ou diagonale, mettre a 0, ça ne marchera pas autrement
-      "mouvements":[        #exemple avec un cavalier
-         [
-            int vecteur colonne,
-            int vecteur ligne
-         ],
-         [
-            -1,
-            2
-         ],
-         [
-            1,
-            2
-         ],
-         [
-            -1,
-            -2
-         ],
-         [
-            1,
-            -2
-         ],
-         [
-            -2,
-            -1
-         ],
-         [
-            -2,
-            1
-         ],
-         [
-            2,
-            1
-         ],
-         [
-            2,
-            -1
-         ]
-      ]
-   }
-]
+{
+  "nom":"NOM",
+  "unicode":"UNICODE Code",
+  "couleur":"white/blanc ou black/noir",
+  "position":"A1 -> H8",
+  "Saut" : 1 si peut sauter des pièces, 0 sinon. Pour des mouvements différents de ligne ou diagonale, mettre a 0, ça ne marchera pas autrement
+  "mouvements":[        #exemple avec un cavalier
+     [int vecteur colonne, int vecteur ligne],
+     [-1, 2],
+     [1, 2],
+     [-1, -2],
+     [1, -2],
+     [-2, -1],
+     [-2, 1],
+     [2, 1],
+     [2, 1]
+  ]
+}

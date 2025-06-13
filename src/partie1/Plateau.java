@@ -433,4 +433,9 @@ public class Plateau
 			}
 		}
 	}
+
+	public ArrayList<ArrayList<IPiece>> getPlateau()
+	{
+		return plateau;
+	}
 }

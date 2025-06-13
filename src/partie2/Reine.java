@@ -23,7 +23,7 @@ public class Reine implements IPiece
 	}
 
 	@Override
-	public void affiche()	//Couleurs inversées car IDE en thème foncé
+	public void affiche()    //Couleurs inversées car IDE en thème foncé
 	{
 		if (color == 1)
 		{
@@ -51,6 +51,7 @@ public class Reine implements IPiece
 
 		int couleurDepart = PlateauUtils.getPiece(plateau, colonne, ligne).getColor();
 
+		//Tiré de fou
 		for (int i = 1; i < 8; i++) // haut droite
 		{
 			int nouvelleColonne = colonne + i;
@@ -154,14 +155,14 @@ public class Reine implements IPiece
 				break;
 			}
 		}
-
+		// Tiré de tour
 		int[][] directions =
-		{
-				{ 1, 0 }, // droite
-				{ -1, 0 }, // gauche
-				{ 0, 1 }, // bas
-				{ 0, -1 } // haut
-		};
+				{
+						{1, 0}, // droite
+						{-1, 0}, // gauche
+						{0, 1}, // bas
+						{0, -1} // haut
+				};
 
 		for (int[] dir : directions)
 		{

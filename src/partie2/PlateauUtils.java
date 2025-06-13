@@ -140,8 +140,8 @@ public class PlateauUtils
 		return false;
 	}
 
-	public void replacePiece(ArrayList<ArrayList<IPiece>> plateau, IPiece pieceARemplacer, IPiece PieceAAjouter)
+	public static void replacePiece(Plateau plateau, IPiece piece, int colonne, int ligne)
 	{
-//		plateau.set(pieceAAjouter);
+		plateau.getPlateau().get(ligne).set(colonne, piece);
 	}
 }

@@ -27,20 +27,20 @@ public class main
 		int nb = scanner.nextInt();
 		for (int i=0; i< nb; i++)
 		{
-			System.out.println("nom de la pièce (sans le .txt)");
-			String read = readFile("/home/elio/IdeaProjects/Echecs-IN361/src/partie2/piecescustoms/" + scanner.nextLine() + ".txt");
+			System.out.println("Nom de la pièce (case sensitive + mettre l'extension)");
+			String val = scanner.next();
+			String read = readFile(PATH + val);
 
-			CustomPiece pieces = gson.fromJson(read, new TypeToken<CustomPiece>() {}.getType());
-//			PlateauUtils.replace(plateau, )
-
+			CustomPiece piece = gson.fromJson(read, new TypeToken<CustomPiece>() {}.getType());
+			PlateauUtils.replacePiece(plat, piece, PlateauUtils.getColumnNumber(piece.getPosition().substring(0,1)), Integer.parseInt(piece.getPosition().substring(1,2))-1);
 		}
 
-//		while (true)
-//		{
-//			plat.affichePlateau();
-//			plat.movePiece(scanner, (nbCout % 2) == 0);
-//			nbCout++;
-//		}
+		while (true)
+		{
+			plat.affichePlateau();
+			plat.movePiece(scanner, (nbCout % 2) == 0);
+			nbCout++;
+		}
 
 	}
 

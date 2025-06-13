@@ -1,0 +1,17 @@
+
+{
+    "nom": "TANK",
+    "unicode": "U+1F6E2",
+    "couleur": "black",
+    "position": "E4",
+     "saut": 0,
+    "mouvements": [
+        [-3, 0],
+        [-2, 0],
+        [-1, 0],
+        [1, 0],
+        [2, 0],
+        [1, 0]
+      ]
+}
+

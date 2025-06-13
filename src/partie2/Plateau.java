@@ -320,6 +320,11 @@ public class Plateau
 		return plateau;
 	}
 
+	public ArrayList<ArrayList<IPiece>> getPlateau()
+	{
+		return plateau;
+	}
+
 	public void affichePlateau()
 	{
 		for (int i = 8; i > 0; i--)
@@ -344,7 +349,7 @@ public class Plateau
 		boolean loopColor = true;
 
 		String pieceABougerString = null;
-		String pieceABougerColumn = null;
+		String pieceABougerColonne = null;
 		String pieceABougerLine = null;
 		IPiece pieceABouger = null;
 
@@ -362,13 +367,12 @@ public class Plateau
 				{
 					break;
 				}
-
 			}
 
-			pieceABougerColumn = pieceABougerString.substring(0, 1);
+			pieceABougerColonne = pieceABougerString.substring(0, 1);
 			pieceABougerLine = pieceABougerString.substring(1, 2);
 
-			pieceABouger = PlateauUtils.getPiece(plateau, PlateauUtils.getColumnNumber(pieceABougerColumn),
+			pieceABouger = PlateauUtils.getPiece(plateau, PlateauUtils.getColumnNumber(pieceABougerColonne),
 					Integer.parseInt(pieceABougerLine) - 1);
 
 			if (pieceABouger == null || pieceABouger instanceof Blank)
@@ -389,7 +393,7 @@ public class Plateau
 			}
 		}
 
-		pieceABouger.whereToMove(plateau, PlateauUtils.getColumnNumber(pieceABougerColumn),
+		pieceABouger.whereToMove(plateau, PlateauUtils.getColumnNumber(pieceABougerColonne),
 				Integer.parseInt(pieceABougerLine) - 1);
 
 		boolean loopCanMove = true;
@@ -409,21 +413,20 @@ public class Plateau
 				{
 					break;
 				}
-
 			}
 
-			String pieceNouvellePositionColumn = pieceNouvellePositionString.substring(0, 1);
-			String pieceNouvellePositionLine = pieceNouvellePositionString.substring(1, 2);
+			String pieceNouvellePositionColonne = pieceNouvellePositionString.substring(0, 1);   //on récupère la colonne
+			String pieceNouvellePositionLine = pieceNouvellePositionString.substring(1, 2);     //on recupère la ligne
 
-			boolean moveAllowed = pieceABouger.canMove(plateau, PlateauUtils.getColumnNumber(pieceABougerColumn),
-					Integer.parseInt(pieceABougerLine) - 1, PlateauUtils.getColumnNumber(pieceNouvellePositionColumn),
+			boolean moveAllowed = pieceABouger.canMove(plateau, PlateauUtils.getColumnNumber(pieceABougerColonne),
+					Integer.parseInt(pieceABougerLine) - 1, PlateauUtils.getColumnNumber(pieceNouvellePositionColonne),
 					Integer.parseInt(pieceNouvellePositionLine) - 1);
 
 			if (moveAllowed)
 			{
-				PlateauUtils.invertPieces(plateau, PlateauUtils.getColumnNumber(pieceABougerColumn),
+				PlateauUtils.invertPieces(plateau, PlateauUtils.getColumnNumber(pieceABougerColonne),
 						Integer.parseInt(pieceABougerLine) - 1,
-						PlateauUtils.getColumnNumber(pieceNouvellePositionColumn),
+						PlateauUtils.getColumnNumber(pieceNouvellePositionColonne),
 						Integer.parseInt(pieceNouvellePositionLine) - 1);
 				loopCanMove = false;
 			}
